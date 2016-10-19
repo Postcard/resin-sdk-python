@@ -113,10 +113,11 @@ class Auth(object):
 
         """
 
-        return self.base_request.request(
+        token = self.base_request.request(
             'login_', 'POST', data=credentials,
             endpoint=self.settings.get('api_endpoint'), auth=False
         )
+        return token.decode('utf-8')
 
     def is_logged_in(self):
         """

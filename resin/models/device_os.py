@@ -1,4 +1,4 @@
-from sets import Set
+
 import json
 
 from ..base_request import BaseRequest
