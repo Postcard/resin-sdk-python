@@ -186,7 +186,7 @@ class BaseRequest(object):
         response = requests.get(url, headers=headers)
         if not response.ok:
             raise exceptions.RequestError(response._content)
-        return response.content
+        return response.content.decode('utf-8')
 
 
 class Util(object):
